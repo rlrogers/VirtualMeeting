@@ -1,2 +1,2 @@
 # VirtualMeeting
-Django based application to hold meetings
+Hold a virtual meeting
