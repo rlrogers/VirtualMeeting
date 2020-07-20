@@ -10,8 +10,10 @@ from .forms import CourseForm
 class CourseListView(ListView):
     model = Course
 
+
 class CourseDetailView(DetailView):
     model = Course
+    
 
 
 class CourseCreateView(CreateView):

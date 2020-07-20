@@ -126,4 +126,4 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 1
-AUTH_USER_MODEL = 'course.User'
+AUTH_USER_MODEL = 'course.Attendee'
