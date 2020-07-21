@@ -29,22 +29,21 @@ class Presenter(models.Model):
         return f"{self.first_name} {self.last_name} {self.post_nominal}"
     
 
+
+
+
+
+SUBJECT_CHOICES = (
+    ('SUBJECT_01', 'Subject 1'),
+    ('SUBJECT_02', 'Subject 2'),
+    ('SUBJECT_03', 'Subject 3'),
+    ('SUBJECT_04', 'Subject 4'),
+    ('SUBJECT_05', 'Subject 5')
+    )
+
+
 class Subject(models.Model):
-    SUBJECT_01 = 'SUB_01'
-    SUBJECT_02 = 'SUB_02'
-    SUBJECT_03 = 'SUB_03'
-    SUBJECT_04 = 'SUB_04'
-    SUBJECT_05 = 'SUB_05'
-
-    SUBJECT_CHOICES =[
-    (SUBJECT_01, 'Subject 1'),
-    (SUBJECT_02, 'Subject 2'),
-    (SUBJECT_03, 'Subject 3'),
-    (SUBJECT_04, 'Subject 4'),
-    (SUBJECT_05, 'Subject 5')
-    ]
-
-    subject = models.CharField(max_length= 20, choices=SUBJECT_CHOICES, blank=False)
+    subject = models.CharField(choices=SUBJECT_CHOICES, max_length= 20)
     slug = models.SlugField()
 
     def __str__(self):
@@ -57,23 +56,26 @@ class Subject(models.Model):
 
 
 
+TOPIC_CHOICES = (
+    ('TOPIC_01', 'Topic 1'),
+    ('TOPIC_02', 'Topic 2'),
+    ('TOPIC_03', 'Topic 3'),
+    ('TOPIC_04', 'Topic 4'),
+    ('TOPIC_05', 'Topic 5')
+    )
+
+
+
 class Topic(models.Model):
-    TOPIC_01 = 'TOP_01'
-    TOPIC_02 = 'TOP_02'
-    TOPIC_03 = 'TOP_03'
-    TOPIC_04 = 'TOP_04'
-    TOPIC_05 = 'TOP_05'
+    # TOPIC_01 = 'TOP_01'
+    # TOPIC_02 = 'TOP_02'
+    # TOPIC_03 = 'TOP_03'
+    # TOPIC_04 = 'TOP_04'
+    # TOPIC_05 = 'TOP_05'
     
-    TOPIC_CHOICES =[
-    (TOPIC_01, 'Topic 1'),
-    (TOPIC_02, 'Topic 2'),
-    (TOPIC_03, 'Topic 3'),
-    (TOPIC_04, 'Topic 4'),
-    (TOPIC_05, 'Topic 5')
-    ]
+   
 
-
-    topic = models.CharField(max_length= 20, choices=TOPIC_CHOICES, blank=False)
+    topic = models.CharField(choices=TOPIC_CHOICES, max_length= 20, blank=False)
     slug = models.SlugField()
 
     def __str__(self):

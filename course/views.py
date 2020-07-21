@@ -4,8 +4,10 @@ from django.views.generic import (ListView,
                                  UpdateView,
                                  CreateView,
                                  DeleteView)
-from .models import Course, CourseView, Like, Comment
+from .models import Attendee, Presenter, Subject, Topic, Course, Comment, CourseView, Like
 from .forms import CourseForm
+
+
 
 class CourseListView(ListView):
     model = Course
@@ -14,7 +16,6 @@ class CourseListView(ListView):
 class CourseDetailView(DetailView):
     model = Course
     
-
 
 class CourseCreateView(CreateView):
     form_class = CourseForm
@@ -46,3 +47,18 @@ class CourseDeleteView(DeleteView):
     model = Course
     success_url = '/'
 
+
+class SubjectListView(ListView):
+    model = Subject
+
+
+class SubjectDetailView(DetailView):
+    model = Subject
+
+
+class TopicListView(ListView):
+    model = Topic
+
+
+class TopicDetailView(DetailView):
+    model = Topic

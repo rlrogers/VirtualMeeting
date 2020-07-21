@@ -10,11 +10,18 @@
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="{{ object.thumbnail.url  }}" alt="Card image cap">
             <div class="card-body">
-                <h3>{{ object.subject }}</h3>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h3>{{ object.name }}</h3>
+                <p><a href="#">{{ object.subject}}</a> | <a href="#">{{ object.topic }}</a></p>
+                <p>Presented by: {{ object.presenters }}</p>
+                <p>Description: {{ object.description }}</p>
+                <small>Published on: {{ object.publish_date }}</small>
+                <hr>
+                <div class="btn btn-primary" href="{{ course.get_absolute_url }}">Go to Session</div>
             </div>
         </div>
     {% endfor %}
+
+
 
  
 </div>
