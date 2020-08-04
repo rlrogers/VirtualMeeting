@@ -12,6 +12,8 @@ Features in the Work:
 Features in the next steps:
   - Exhibitor/Attendee engagement: Bumble like browsing through exhibitors(one gives permission to be contacted)
 
+
+<h4>Preview of UI</h4>
 ![SessionsProgress](https://user-images.githubusercontent.com/16906890/89313276-e87bd480-d63d-11ea-8cbc-1f5e39f3ad09.png)Ex
 
 <hr>
