@@ -1,4 +1,4 @@
-# VirtualMeeting
+# VirtualMeeting built with Django
 
 <h3>Hold a virtual meeting which doubles as a collection library</h3>
 
